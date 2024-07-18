@@ -17,7 +17,7 @@ int main() {
 
 //Find a peak element which is not smaller than its neighbors?
 
-int Arr[]={3,45,5,6,8,12,9,23,10};
+int Arr[]={3,5,6,8,12,9,23,10};
 int size = sizeof(Arr) / sizeof(Arr[0]);
 cout<<Findpeak(Arr,size)<<endl;;
     return 0;
