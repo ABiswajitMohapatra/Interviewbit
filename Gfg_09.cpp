@@ -21,7 +21,7 @@ void Union(int A[],int B[],int s1,int s2){
     }
 
 int main() {
-     int A[]={1,2,3,4,5,6,23};
+     int A[]={1,2,3,4,5,6,23,2,2};
     int B[]={2,4,9,7,8,1,6,89};
     int s1=sizeof(A)/sizeof(A[0]);
     int s2=sizeof(B)/sizeof(B[0]);

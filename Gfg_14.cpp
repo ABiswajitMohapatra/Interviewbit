@@ -1,19 +1,23 @@
-//Find the first repeating element in an array of integers?
 #include <iostream>
 using namespace std;
-int Find_first_repeating(int A[],int size){
-    cout<<"The first repeating element is:";
-    
-    for(int i=0;i<size;i++){
-        if(A[i]==A[i+1]){
-            return A[i];
+
+void Find_first_repeating(int A[], int size) {
+    cout << "The first repeating element is: ";
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (A[i] == A[j]) {
+                cout << A[i];
+                return; // Return as soon as the first repeating element is found
+            }
         }
     }
-    return -1;
+    cout << "No repeating element found.";
+    cout << endl; // Newline for better formatting
 }
+
 int main() {
-    int A[]={1,2,3,3,4,2,4,5,5,6,1};
-    int size=sizeof(A)/sizeof(A[0]);
-    cout<<Find_first_repeating(A,size);
+    int A[] = {1, 2, 3, 4,  5, 6,3,1};
+    int size = sizeof(A) / sizeof(A[0]);
+    Find_first_repeating(A, size);
     return 0;
 }
